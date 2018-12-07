@@ -31,35 +31,9 @@ CDATA means telling to xml to don't interrupt the code that is going to be inclu
 The tab trigger in the above example is thisob, after entering thisob and tab space the content will be displayed in place of ifwrap.
 scope varies from language to language in javascript the scope is source.js
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-forEach program
+----------------------------------------------------------------------------------------------------------------------------------------
+forEach Snippet
 --------------------------
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Foreach & Map</title>
-<style type="text/css">
-body{
-        color: white;
-        font-size: 30px;
-        }
-</style>
-</head>
-<body bgcolor="#665851">
-	<h3>Prints the list of employees in an organization</h3>
-	<script type="text/javascript">
-		document.write("Employee List :<br/><br/>");
-		var employee= ["Amar","Arav","Akhil","Akansha"];
-		employee.forEach(function (item,index,array) {
-		document.write(item+ "<br>");
-		})
-	</script>
-</body>
-</html>
-
-Snippet
--------------
 
 <snippet>
 	<content><![CDATA[
@@ -76,39 +50,9 @@ Snippet
 <scope>source.js</scope> 
 </snippet>
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
-Map Program
----------------------
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Map</title>
-<style>
-body{
-	background-color: #bbdefb;
-	color: black;
-	font-size: 30px;
-        }
-</style>
-</head>
-<body>
-<h3>Checks whether a number is even or odd, If even then even number will be doubled</h3>
-
-<script type="text/javascript">
-	let arr = [1,2,3,4];
-	let newArr = arr.map(function(v,i,a) 
-               {       
-               return v % 2 === 0 ? v * 2 : v;    
-               });
-              document.write(newArr);	
-</script>
-
-</body>
-</html>
-
-Snippet
+Map Snippet
 ------------
 
 <snippet>
@@ -127,10 +71,10 @@ Snippet
 <scope>source.js</scope> 
 </snippet>
 
---------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+
 Dark mode and light mode
 ----------------------------------------
-
 
 <!DOCTYPE html>
 <html>
@@ -169,16 +113,16 @@ Dark mode and light mode
            }
 </script>
 <h3>Dark and Light mode</h3>
-<p>The difference between darkness and light will always remain— the stars and the moon will always need the darkness to be seen, the darkness will just not be worth having without the moon and the stars</p>
+<p>The difference between darkness and light will always remainâ€” the stars and the moon will always need the darkness to be seen, the darkness will just not be worth having without the moon and the stars</p>
 
 <input type="button" value="dark" id="onoff" onclick="onoff();changeBodyBg('black');bodycl('white');">
 </body>
 </html>
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
 Gradient background
-----------------------------------
+--------------------
 
 <!DOCTYPE html>
 <html>
