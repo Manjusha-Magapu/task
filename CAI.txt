@@ -1,0 +1,220 @@
+this Snippet
+-----------------
+<snippet>
+  <content><![CDATA[
+<script>
+var myObject = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+x = myObject.fullName();
+document.write(x);
+</script>
+
+]]>
+</content>
+  <tabTrigger>thisob</tabTrigger>
+  <scope>source.js</scope>   
+</snippet>
+
+Explanation
+-------------------
+Snippets are a piece of code which a developer can implement and use it multiple times.
+Snippets are not only for simple things.
+Basic snippet operations are fields ,place holders,mirrored fields and substitutions.
+The above snippet deals with this keyword.
+In content tag the data will be included.
+CDATA means telling to xml to don't interrupt the code that is going to be include.
+The tab trigger in the above example is thisob, after entering thisob and tab space the content will be displayed in place of ifwrap.
+scope varies from language to language in javascript the scope is source.js
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+forEach program
+--------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Foreach & Map</title>
+<style type="text/css">
+body{
+        color: white;
+        font-size: 30px;
+        }
+</style>
+</head>
+<body bgcolor="#665851">
+	<h3>Prints the list of employees in an organization</h3>
+	<script type="text/javascript">
+		document.write("Employee List :<br/><br/>");
+		var employee= ["Amar","Arav","Akhil","Akansha"];
+		employee.forEach(function (item,index,array) {
+		document.write(item+ "<br>");
+		})
+	</script>
+</body>
+</html>
+
+Snippet
+-------------
+
+<snippet>
+	<content><![CDATA[
+               <script type="text/javascript">
+		document.write("Employee List<br/>");
+		var employee= ["Amar","Arav","Akhil","Akansha"];
+		employee.forEach(function (item,index,array) {
+		document.write(item+ "<br>");
+		})
+	</script>
+               ]]></content>
+
+<tabTrigger>emp</tabTrigger> 
+<scope>source.js</scope> 
+</snippet>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Map Program
+---------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Map</title>
+<style>
+body{
+	background-color: #bbdefb;
+	color: black;
+	font-size: 30px;
+        }
+</style>
+</head>
+<body>
+<h3>Checks whether a number is even or odd, If even then even number will be doubled</h3>
+
+<script type="text/javascript">
+	let arr = [1,2,3,4];
+	let newArr = arr.map(function(v,i,a) 
+               {       
+               return v % 2 === 0 ? v * 2 : v;    
+               });
+              document.write(newArr);	
+</script>
+
+</body>
+</html>
+
+Snippet
+------------
+
+<snippet>
+	<content><![CDATA[
+              <script type="text/javascript">
+	                   let arr = [1,2,3,4];
+	                   let newArr = arr.map(function(v,i,a)
+                                  {
+                                  return v % 2 === 0 ? v * 2 : v;
+                                  });
+	                  document.write(newArr);
+             </script>
+             ]]></content>
+	
+<tabTrigger>evenmap</tabTrigger> 
+<scope>source.js</scope> 
+</snippet>
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Dark mode and light mode
+----------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dark and light mode</title>
+<script>
+         function changeBodyBg(color)
+         {
+         document.body.style.background = color;
+         }
+        function bodycl(color)
+        {
+        document.body.style.color= color;
+        }
+</script>
+<style>
+         body{
+    	font-family: sans-serif;
+    	font-size: 20px;
+    	}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+           function onoff()
+           {
+           currentvalue = document.getElementById('onoff').value;
+           if(currentvalue == "light")
+           {
+           document.getElementById("onoff").value="dark";
+           }
+           else
+           {
+           document.getElementById("onoff").value="light";
+           }
+           }
+</script>
+<h3>Dark and Light mode</h3>
+<p>The difference between darkness and light will always remain— the stars and the moon will always need the darkness to be seen, the darkness will just not be worth having without the moon and the stars</p>
+
+<input type="button" value="dark" id="onoff" onclick="onoff();changeBodyBg('black');bodycl('white');">
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gradient background
+----------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>color gradient </title>
+<script type="text/javascript">
+
+var color = new Array();
+color[0] = "#CC99FF";
+color[1] = "#FF99CC";
+color[2] = "#FF9999";
+color[3] = "#FFCC99";
+color[4] = "#FFFF99";
+color[5] = "#CCFF99";
+color[6] = "#99FF99";
+color[7] = "#99FFCC";
+color[8] = "#66FFFF";
+color[9] = "#66CCFF";
+
+function changeColor()
+{
+  var randomColor = Math.floor(Math.random() * color.length);
+  document.getElementById("new").style.backgroundColor = color[randomColor];
+
+}
+</script>
+<style>
+           div{
+	 width: 300px;
+	 height: 300px;
+                }
+</style>
+</head>
+<body onload="changeColor()">
+	<center>
+               <div id="new"></div>
+               </center>	
+</body>
+</html>
